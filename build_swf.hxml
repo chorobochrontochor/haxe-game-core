@@ -1,0 +1,28 @@
+-main Main
+
+# Include sources
+-cp src
+-cp lib/core/haxe/src
+-cp lib/genome2d/Genome2D-Spine/src
+-cp lib/genome2d/Genome2D-Core/src
+-cp lib/genome2d/Genome2D-ContextCommon/src
+-cp lib/genome2d/Genome2D-ContextFlash/src
+
+# Include libraries
+-lib signal
+-lib hscript
+-lib format
+-swf-lib lib/genome2d/Genome2D-ContextFlash/lib/AGAL.swc
+
+# Haxe flags
+#-dce no
+--macro include('*')
+
+#--no-traces
+
+-D debug=1
+-debug
+
+# Flash Swc flags
+-swf-version 12
+-swf out-swf/TheProject.swf
