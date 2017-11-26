@@ -19,10 +19,10 @@
 
 #--no-traces
 
--D debug=1
+#-D debug=1
 -debug
--D js-flatten
--dce full
+#-D js-flatten
+#-dce full
 
 # JS flags
 -js out-js/TheProject.js
