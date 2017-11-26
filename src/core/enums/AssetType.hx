@@ -4,6 +4,7 @@
 package core.enums;
 
 enum AssetType {
-    ASSET_ATLAS_XML;
-    ASSET_TEXTURE;
+    TEXTURE_ATLAS_XML;
+    TEXTURE;
+    SOUND;
 }
