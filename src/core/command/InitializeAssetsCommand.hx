@@ -6,17 +6,15 @@ import com.genome2d.assets.GAsset;
 import com.genome2d.assets.GStaticAssetManager;
 import com.genome2d.textures.GTextureManager;
 import core.command.base.Command;
+import core.enmus.AssetType;
 
 class InitializeAssetsCommand extends Command {
 
-    static private var FOLDED_ASSETS:String = "assets/";
+    static private var FOLDER_ASSETS:String = "assets/";
 
-    static public var ASSET_ATLAS_XML:String = "atlas";
-    static public var ASSET_TEXTURE:String = "texture";
+    private var _assetData:Array<InitializeAssetsCommandData>;
 
-    private var _assetData:Array<Array<String>>;
-
-    public function new(assetData:Array<Array<String>>) {
+    public function new(assetData:Array<InitializeAssetsCommandData>) {
         super();
 
         _assetData = assetData;
@@ -30,25 +28,24 @@ class InitializeAssetsCommand extends Command {
     **/
     override public function execute():Void {
         for (i in 0 ... _assetData.length) {
-            var url:String = _assetData[i][0];
-            var id:String = _assetData[i][1];
-            GStaticAssetManager.addFromUrl(FOLDED_ASSETS + url, url);
+            var url:String = _assetData[i].url;
+            GStaticAssetManager.addFromUrl(FOLDER_ASSETS + url, url);
         }
         GStaticAssetManager.loadQueue(onAssetsLoaded, onAssetsFailed);
     }
 
     private function onAssetsLoaded():Void {
         for (i in 0 ... _assetData.length) {
-            var url:String = _assetData[i][0];
-            var id:String = _assetData[i][1];
-            var type:String = _assetData[i][2];
+            var url:String = _assetData[i].url;
+            var id:String = _assetData[i].id;
+            var type:AssetType = _assetData[i].type;
 
             var asset:GAsset = GStaticAssetManager.getAssetById(url);
 
-            if (type == ASSET_TEXTURE) {
+            if (type == AssetType.ASSET_TEXTURE) {
                 GTextureManager.createTexture(id, asset);
             }
-            if (type == ASSET_ATLAS_XML) {
+            if (type == AssetType.ASSET_ATLAS_XML) {
                 var texture = GTextureManager.getTexture(id);
                 GTextureManager.createTextureAtlas(texture, cast asset, false);
             }

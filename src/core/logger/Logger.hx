@@ -2,13 +2,11 @@
  *	Copyright 11/25/2017 Michal Deak. All rights reserved.
  */
 package core.logger;
+import core.enmus.LogType;
 import haxe.CallStack.StackItem;
 import String;
 
 class Logger {
-
-    static private var TYPE_ERROR:String = "error";
-    static private var TYPE_LOG:String = "log";
 
     public function new() {
     }
@@ -38,15 +36,15 @@ class Logger {
     /**
     * Prepare data to print
     **/
-    static public function traceData(type:String, text:String, params:Array<Dynamic> = null, showCallStack:Bool = false, ?pos:haxe.PosInfos):Void {
+    static public function traceData(type:LogType, text:String, params:Array<Dynamic> = null, showCallStack:Bool = false, ?pos:haxe.PosInfos):Void {
         if (showCallStack) {
             printCallStack();
         }
 
         var str:String = "";
-        if (type == TYPE_LOG) {
+        if (type == LogType.LOG) {
             str = "#Log -";
-        } else if (type == TYPE_ERROR) {
+        } else if (type == LogType.ERROR) {
             str = "#Error -";
         }
 
@@ -79,7 +77,7 @@ class Logger {
     * @param printCallStack - if true, print callstack
     **/
     static public function log(text:String, params:Array<Dynamic> = null, showCallStack:Bool = false, ?pos:haxe.PosInfos):Void {
-        traceData(TYPE_LOG, text, params, showCallStack, pos);
+        traceData(LogType.LOG, text, params, showCallStack, pos);
     }
 
     /**
@@ -90,6 +88,6 @@ class Logger {
     * @param printCallStack - if true, print callstack
     **/
     static public function error(text:String, params:Array<Dynamic> = null, showCallStack:Bool = false, ?pos:haxe.PosInfos):Void {
-        traceData(TYPE_ERROR, text, params, showCallStack, pos);
+        traceData(LogType.ERROR, text, params, showCallStack, pos);
     }
 }
