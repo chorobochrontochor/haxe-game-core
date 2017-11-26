@@ -3,25 +3,29 @@
  */
 package core.sound.js;
 
+import howler.Howl;
+
 class SoundJS implements ISound {
 
     private var _url:String;
     private var _id:String;
 
-    public function new(url, id) {
+    public function new(url:String, id:String) {
         _url = url;
         _id = id;
-
-//        var options:HowlOptions = {};
-//        options.src = ["assets/sounds/test_sound.mp3"];
-//        options.autoplay = false;
-//        options.loop = true;
-//        var snd:Howl = new Howl(options);
-//        snd.play();
     }
 
     public function play():ISoundChannel{
-        return null;
+        var options:HowlOptions = {html5:true}; //{};
+        options.src = [_url];
+        options.autoplay = false;
+        options.loop = true;
+
+        var snd:Howl = new Howl(options);
+        var playId:Int = snd.play();
+
+        var soundChannel:ISoundChannel = new SoundChannelJS(snd,playId);
+        return soundChannel;
     }
 
     public function getUrl():String {
