@@ -2,6 +2,8 @@
  *	Copyright 11/25/2017 Michal Deak. All rights reserved.
  */
 package core.command;
+import core.sound.SoundManager;
+import core.CoreConfig;
 import com.genome2d.assets.GAsset;
 import com.genome2d.assets.GStaticAssetManager;
 import com.genome2d.assets.GXmlAsset;
@@ -10,8 +12,6 @@ import core.command.base.Command;
 import core.enums.AssetType;
 
 class InitializeAssetsCommand extends Command {
-
-    static private var FOLDER_ASSETS:String = "assets/";
 
     private var _assetData:Array<InitializeAssetsCommandData>;
 
@@ -34,10 +34,11 @@ class InitializeAssetsCommand extends Command {
             var type:AssetType = _assetData[i].type;
 
             if (type == AssetType.TEXTURE || type == AssetType.TEXTURE_ATLAS_XML) {
-                GStaticAssetManager.addFromUrl(FOLDER_ASSETS + url, url);
+                //Id is url, because we wantd uniqu id for GAsset, to match atas + xml by same id
+                GStaticAssetManager.addFromUrl(CoreConfig.FOLDER_ASSETS + url, url);
             }
             if (type == AssetType.SOUND) {
-                //TODO
+                SoundManager.addFromUrl(CoreConfig.FOLDER_ASSETS + url, id);
             }
         }
         GStaticAssetManager.loadQueue(onAssetsLoaded, onAssetsFailed);

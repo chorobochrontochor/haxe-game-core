@@ -16,8 +16,8 @@ class Main {
         var assetData:Array<InitializeAssetsCommandData> = [
             new InitializeAssetsCommandData("textures/test.png", "test", AssetType.TEXTURE),
             new InitializeAssetsCommandData("textures/test_atlas.png", "test_atlas", AssetType.TEXTURE),
-            new InitializeAssetsCommandData("textures/test_atlas.xml", "test_atlas", AssetType.TEXTURE_ATLAS_XML)
-//            new InitializeAssetsCommandData("sounds/test_sound.mp3", "test_sound", AssetType.SOUND)
+            new InitializeAssetsCommandData("textures/test_atlas.xml", "test_atlas", AssetType.TEXTURE_ATLAS_XML),
+            new InitializeAssetsCommandData("sounds/test_sound.mp3", "test_sound", AssetType.SOUND)
         ];
         initialization.init(assetData);
     }
