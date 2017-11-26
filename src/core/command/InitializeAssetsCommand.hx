@@ -6,7 +6,7 @@ import com.genome2d.assets.GAsset;
 import com.genome2d.assets.GStaticAssetManager;
 import com.genome2d.textures.GTextureManager;
 import core.command.base.Command;
-import core.enmus.AssetType;
+import core.enums.AssetType;
 
 class InitializeAssetsCommand extends Command {
 

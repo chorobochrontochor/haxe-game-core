@@ -4,7 +4,7 @@
 package ;
 
 import core.command.InitializeAssetsCommandData;
-import core.enmus.AssetType;
+import core.enums.AssetType;
 import core.Initialization;
 
 class Main {

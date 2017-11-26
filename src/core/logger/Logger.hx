@@ -2,7 +2,7 @@
  *	Copyright 11/25/2017 Michal Deak. All rights reserved.
  */
 package core.logger;
-import core.enmus.LogType;
+import core.enums.LogType;
 import haxe.CallStack.StackItem;
 import String;
 
