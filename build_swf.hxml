@@ -2,7 +2,6 @@
 
 # Include sources
 -cp src
--cp lib/core/haxe/src
 -cp lib/genome2d/Genome2D-Spine/src
 -cp lib/genome2d/Genome2D-Core/src
 -cp lib/genome2d/Genome2D-ContextCommon/src
@@ -16,13 +15,13 @@
 
 # Haxe flags
 #-dce no
---macro include('*')
+#--macro include('*')
 
 #--no-traces
 
 -D debug=1
 -debug
 
-# Flash Swc flags
+# Flash flags
 -swf-version 12
 -swf out-swf/TheProject.swf

@@ -1,6 +1,0 @@
--cp src
--debug
--swf-version 11.2
---macro include('*')
---macro include('')
--swf out-swc\TheProject.swc

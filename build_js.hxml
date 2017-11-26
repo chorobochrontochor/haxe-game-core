@@ -1,5 +1,28 @@
--cp src
--js out-js/TheProject.js
 -main Main
+
+# Include sources
+-cp src
+-cp lib/genome2d/Genome2D-Spine/src
+-cp lib/genome2d/Genome2D-Core/src
+-cp lib/genome2d/Genome2D-ContextCommon/src
+-cp lib/genome2d/Genome2D-ContextHTML/src
+
+# Include libraries
+-lib howlerjs
+-lib signal
+-lib hscript
+-lib format
+
+# Haxe flags
+#-dce no
+#--macro include('*')
+
+#--no-traces
+
+-D debug=1
+-debug
 -D js-flatten
 -dce full
+
+# JS flags
+-js out-js/TheProject.js
