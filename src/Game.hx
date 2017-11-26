@@ -13,7 +13,8 @@ class Game {
     public function new() {
 
         var sprite:GSprite = GNode.createWithComponent(GSprite);
-        sprite.texture = GTextureManager.getTexture("test");
+        //sprite.texture = GTextureManager.getTexture("test");
+        sprite.texture = GTextureManager.getTextureAtlas("test_atlas").getSubTexture("test_atlas_1");
         sprite.node.setPosition(20, 20);
 
         Genome2D.getInstance().root.addChild(sprite.node);

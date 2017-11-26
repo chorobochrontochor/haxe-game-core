@@ -2,6 +2,7 @@
  *	Copyright 11/25/2017 Michal Deak. All rights reserved.
  */
 package core.command;
+import com.genome2d.assets.GXmlAsset;
 import com.genome2d.assets.GAsset;
 import com.genome2d.assets.GStaticAssetManager;
 import com.genome2d.textures.GTextureManager;
@@ -47,7 +48,8 @@ class InitializeAssetsCommand extends Command {
             }
             if (type == AssetType.ASSET_ATLAS_XML) {
                 var texture = GTextureManager.getTexture(id);
-                GTextureManager.createTextureAtlas(texture, cast asset, false);
+                var xml:Xml = cast(asset, GXmlAsset).xml;
+                GTextureManager.createTextureAtlas(texture, xml, false);
             }
         }
         onCommandSucceed();

@@ -13,7 +13,11 @@ class Main {
 
         //Initialization
         var initialization:Initialization = new Initialization(onInit);
-        var assetData:Array<InitializeAssetsCommandData> = [new InitializeAssetsCommandData("textures/test.png", "test", AssetType.ASSET_TEXTURE)];
+        var assetData:Array<InitializeAssetsCommandData> = [
+            new InitializeAssetsCommandData("textures/test.png", "test", AssetType.ASSET_TEXTURE),
+            new InitializeAssetsCommandData("textures/test_atlas.png", "test_atlas", AssetType.ASSET_TEXTURE),
+            new InitializeAssetsCommandData("textures/test_atlas.xml", "test_atlas", AssetType.ASSET_ATLAS_XML)
+        ];
         initialization.init(assetData);
     }
 
