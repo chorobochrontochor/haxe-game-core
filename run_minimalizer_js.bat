@@ -1,0 +1,1 @@
+uglifyjs out-js/TheProject.js -c -m --mangle-props > out-js/TheProject.js-new
