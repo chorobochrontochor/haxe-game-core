@@ -25,3 +25,4 @@
 # Flash flags
 -swf-version 12
 -swf out-swf/TheProject.swf
+-swf-header 600:800:60

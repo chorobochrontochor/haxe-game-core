@@ -5,12 +5,12 @@ package ;
 
 class AssetId {
 
-    static public var TEXTURE_TEST(default, never):String = "test";
+    static public var TEXTURE_BUNNY(default, never):String = "bunny";
+    static public var TEXTURE_PLATFORM(default, never):String = "platform";
 
-    static public var TEXTURE_TEST_ATLAS(default, never):String = "test_atlas";
-    static public var TEXTURE_TEST_ATLAS_1(default, never):String = "test_atlas_1";
+    static public var TEXTURE_GAME_ATLAS(default, never):String = "game_atlas";
 
-    static public var SOUND_TEST(default, never):String = "test_sound";
+    static public var SOUND_TEST(default, never):String = "game_sound";
 
     public function new() {
     }

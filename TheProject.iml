@@ -3,10 +3,10 @@
   <component name="HaxeModuleSettingsStorage">
     <option name="buildConfig" value="1" />
     <option name="flexSdkName" value="air" />
-    <option name="haxeTarget" value="Flash" />
-    <option name="hxmlPath" value="$MODULE_DIR$/build_swf.hxml" />
+    <option name="haxeTarget" value="JavaScript" />
+    <option name="hxmlPath" value="$MODULE_DIR$/build_js.hxml" />
     <option name="mainClass" value="Main" />
-    <option name="outputFileName" value="TheProject.swf" />
+    <option name="outputFileName" value="TheProject.js" />
     <option name="outputFolder" value="$MODULE_DIR$/out-swf" />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
