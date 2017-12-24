@@ -55,16 +55,5 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library name="haxelib|C:/HaxeToolkit/haxe/lib/howlerjs/2,0,4/src">
-        <CLASSES>
-          <root url="file://C:/HaxeToolkit/haxe/lib/howlerjs/2,0,4/src" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://C:/HaxeToolkit/haxe/lib/howlerjs/2,0,4/src" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>
