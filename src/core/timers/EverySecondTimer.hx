@@ -22,8 +22,17 @@ class EverySecondTimer {
     }
 
     private function onTick():Void {
-        for (i in 0 ... _callbacks.length) {
+        var i:Int = 0;
+        while (i < _callbacks.length) {
+            if (_callbacks[i] == null) {
+                _callbacks.splice(i, 1);
+                i--;
+                if (i < 0) {
+                    return;
+                }
+            }
             _callbacks[i]();
+            i++;
         }
     }
 
