@@ -2,7 +2,7 @@
 <!-- saved from url=(0014)about:internet -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
     <head>
-	<title>TheProject</title>
+	<title>Nufko</title>
 	<style>
 	html, head, body {
 		width: 100%;
@@ -14,19 +14,22 @@
 		padding: 0;
 		margin: 0;
 		
-		width: 768;
-		height: 1280;
-		
 		position: absolute;
 		
 		overflow: hidden;
 	}
 	</style>	
 	<script type="text/javascript" src="lib/howler.js"></script>
+	
 	</head>
     <body bgcolor="#000000">
         <canvas id="canvas" width="768" height="1280"></canvas>
         <div id="haxe:trace"></div>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+		</script>
         <script type="text/javascript" src="TheProject.js"></script>
 
     </body>
