@@ -8,6 +8,6 @@ import com.genome2d.textures.GTextureManager;
 class Carrot extends ObjectBase{
 
     public function new() {
-        super(GTextureManager.getTextureAtlas(AssetId.TEXTURE_GAME_ATLAS).getSubTexture(AssetId.TEXTURE_CARROT), 0.5, 1);
+        super(GTextureManager.getTextureAtlas(AssetId.ATLAS_GAME).getSubTexture(AssetId.TEXTURE_CARROT), 0.5, 1);
     }
 }

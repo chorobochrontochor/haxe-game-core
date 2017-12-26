@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:93f3c05039aa07cad7ab4e387eedcd66:4d4ff8edd2b23e82dc22ac64c4b9640b:4d87daccd1c6393a89afb36baba0c81d$ -->
-<TextureAtlas imagePath="game_atlas.png" width="118" height="49">
+<!-- $TexturePacker:SmartUpdate:aa00796f4d3b534ed177906bad0ee427:5cdb71feb3b2cd538b87be5c5796f4e7:4d87daccd1c6393a89afb36baba0c81d$ -->
+<TextureAtlas imagePath="game_atlas.png" width="598" height="1024">
     <SubTexture name="bunny" x="0" y="0" width="43" height="41"/>
     <SubTexture name="carrot" x="43" y="0" width="32" height="30"/>
     <SubTexture name="nomnomnom" x="75" y="0" width="43" height="41"/>
-    <SubTexture name="platform" x="0" y="41" width="64" height="8"/>
+    <SubTexture name="platform1" x="118" y="0" width="98" height="75"/>
+    <SubTexture name="platform2" x="216" y="0" width="34" height="32"/>
+    <SubTexture name="platform3" x="250" y="0" width="50" height="33"/>
+    <SubTexture name="platform4" x="300" y="0" width="48" height="35"/>
+    <SubTexture name="sky" x="348" y="0" width="250" height="1024"/>
 </TextureAtlas>

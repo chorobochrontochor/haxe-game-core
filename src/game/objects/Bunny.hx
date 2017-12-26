@@ -11,7 +11,7 @@ class Bunny extends ObjectBase {
     private var _velocity:Float = 0;
 
     public function new() {
-        super(GTextureManager.getTextureAtlas(AssetId.TEXTURE_GAME_ATLAS).getSubTexture(AssetId.TEXTURE_BUNNY), 0.5, 1);
+        super(GTextureManager.getTextureAtlas(AssetId.ATLAS_GAME).getSubTexture(AssetId.TEXTURE_BUNNY), 0.5, 1);
     }
 
     public function onFrameUpdate():Void {

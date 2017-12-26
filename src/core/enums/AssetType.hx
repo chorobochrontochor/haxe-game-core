@@ -7,4 +7,5 @@ enum AssetType {
     TEXTURE_ATLAS_XML;
     TEXTURE;
     SOUND;
+    FONT;
 }

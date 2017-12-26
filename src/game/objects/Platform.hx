@@ -8,6 +8,22 @@ import com.genome2d.textures.GTextureManager;
 class Platform extends ObjectBase {
 
     public function new() {
-        super(GTextureManager.getTextureAtlas(AssetId.TEXTURE_GAME_ATLAS).getSubTexture(AssetId.TEXTURE_PLATFORM), 0.5, 0);
+
+        var rand:Int = Math.round(Math.random()*3);
+        var textureId:String = "";
+
+        if(rand == 0){
+            textureId = AssetId.TEXTURE_PLATFORM1;
+        }
+        if(rand == 1){
+            textureId = AssetId.TEXTURE_PLATFORM2;
+        }
+        if(rand == 2){
+            textureId = AssetId.TEXTURE_PLATFORM3;
+        }
+        if(rand == 3){
+            textureId = AssetId.TEXTURE_PLATFORM4;
+        }
+        super(GTextureManager.getTextureAtlas(AssetId.ATLAS_GAME).getSubTexture(textureId), 0.5, 0);
     }
 }

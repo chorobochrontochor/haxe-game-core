@@ -2,6 +2,7 @@
  *	Copyright 12/25/2017 Michal Deak. All rights reserved.
  */
 package game.objects;
+import com.genome2d.textures.GTextureFilteringType;
 import com.genome2d.components.renderable.GSprite;
 import com.genome2d.geom.GRectangle;
 import com.genome2d.node.GNode;
@@ -25,6 +26,8 @@ class ObjectBase {
 
         SIZE_WIDTH = Std.int(_image.texture.width * _image.node.scaleX);
         SIZE_HEGITH = Std.int(_image.texture.height * _image.node.scaleY);
+
+        _image.texture.filteringType = GTextureFilteringType.NEAREST;
 
         refreshBoundingBox();
     }
